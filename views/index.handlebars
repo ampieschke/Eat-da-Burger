@@ -1,38 +1,37 @@
 <header>
-  <div class="row" class="head">
-    <div class="col-2"><i class="fas fa-hamburger fa-4x"></i>
-    </div>
-    <div class="col-10">
-      <h1>We Got Burgers!</h1>
-    </div>
-  </div>
+  <h1><i class="fas fa-hamburger"></i> We Got Burgers!</h1>
 </header>
-<div class="burgerlist">
-<h2>Burgers for Eatin'!</h2>
 
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{> burgers/burger-block devoured=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
+<div class=" row burgerlist">
+  <div class="to eat col-6">
+    <h2>Burgers for Eatin'</h2>
 
-<h2>Burgers that Got Eaten!</h2>
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
 
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> burgers/burger-block devoured=false}}
-  {{/if}}
-  {{/each}}
-</ul>
 
-<h2>Add a Burger</h2>
+  <div class="eaten col-6">
+    <h2>Burgers that Got Eaten</h2>
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
 <form id="create-form">
-
+<h2>Add a Burger</h2>
   <div class="form-group">
-    <label for="bu">Burg Name:</label>
+    <label for="bu">Burger Name:</label>
     <input type="text" id="bu" name="burger_name">
   </div>
 
@@ -44,4 +43,3 @@
 
   <button type="submit">Add Burg</button>
 </form>
-</div>
