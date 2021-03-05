@@ -1,0 +1,9 @@
+<li>
+	{{#if devoured}}<i class="fas fa-hamburger"></i>  {{burger_name}}{{else}}<i class="fas fa-times-circle"></i>  {{burger_name}}{{/if}}
+
+	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		{{#if devoured}}EAT THIS!{{else}}REORDER!{{/if}}
+	</button>
+
+	<button class="delete-burger" data-id="{{this.id}}">THROW AWAY!</button>
+</li>
