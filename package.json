@@ -1,15 +1,4 @@
-{
-  "name": "eat-da-burger",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.16.3"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
-  "scripts": {
+{"scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js"
